@@ -1,0 +1,19 @@
+@model SistemaDeBarbeariaFront.Models.Agendamento
+
+<h1>Excluir Agendamento</h1>
+
+<p>Tem certeza que deseja excluir o agendamento abaixo?</p>
+
+<div>
+    <h3>Cliente: @Model.cliente</h3>
+    <p>Barbeiro: @Model.barbeiro</p>
+    <p>Serviço: @Model.servicos</p>
+    <p>Data: @Model.HorarioData.ToShortDateString()</p>
+    
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" name="Id" value="@Model.AgendamentoId" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a class="btn btn-secondary" href="@Url.Action("Index")">Cancelar</a>
+</form>

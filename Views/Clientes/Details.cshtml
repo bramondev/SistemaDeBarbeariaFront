@@ -1,0 +1,10 @@
+@model SistemaDeBarbeariaFront.Models.Cliente
+
+<h1>Detalhes do Cliente</h1>
+
+<div>
+    <h3>Nome: @Model.NomeCliente</h3>
+    <p>Telefone: @Model.TelefoneCliente</p>
+</div>
+
+<a class="btn btn-secondary" href="@Url.Action("Index")">Voltar</a>

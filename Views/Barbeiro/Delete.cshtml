@@ -1,0 +1,16 @@
+@model SistemaDeBarbeariaFront.Models.Barbeiro
+
+<h1>Excluir Barbeiro</h1>
+
+<p>Tem certeza que deseja excluir o barbeiro abaixo?</p>
+
+<div>
+    <h3>Nome: @Model.NomeBarbeiro</h3>
+    <p>Especialidade: @Model.Especialidade</p>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" name="Id" value="@Model.IdBarbeiro" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a class="btn btn-secondary" href="@Url.Action("Index")">Cancelar</a>
+</form>

@@ -1,0 +1,13 @@
+@model SistemaDeBarbeariaFront.Models.Agendamento
+
+<h1>Detalhes do Agendamento</h1>
+
+<div>
+    <h3>Cliente: @Model.cliente</h3>
+    <p>Barbeiro: @Model.barbeiro</p>
+    <p>Serviço: @Model.servicos</p>
+    <p>Data: @Model.HorarioData.ToShortDateString()</p>
+    
+</div>
+
+<a class="btn btn-secondary" href="@Url.Action("Index")">Voltar</a>

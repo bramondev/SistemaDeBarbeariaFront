@@ -1,0 +1,15 @@
+﻿@model SistemaDeBarbeariaFront.Models.Home
+
+<h1>Bem-vindo à Barbearia</h1>
+
+<p>
+    Selecione uma das opções abaixo para acessar as páginas de Agendamento, Clientes ou Barbeiros.
+</p>
+
+<div class="button-group">
+    <a class="btn btn-primary" href="@Url.Action("Index", "Agendamentos")">Agendar</a>
+    <a class="btn btn-secondary" href="@Url.Action("Index", "Clientes")">Clientes</a>
+    <a class="btn btn-success" href="@Url.Action("Index", "Barbeiro")">Barbeiros</a>
+</div>
+
+

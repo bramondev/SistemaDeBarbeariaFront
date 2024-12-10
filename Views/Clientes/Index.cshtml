@@ -1,0 +1,29 @@
+@model IEnumerable<SistemaDeBarbeariaFront.Models.Cliente>
+
+<h1>Lista de Clientes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.NomeCliente</td>
+                <td>@cliente.TelefoneCliente</td>
+                <td>
+                    <a class="btn btn-info" href="@Url.Action("Details", new { id = cliente.IdCliente })">Detalhes</a>
+                    <a class="btn btn-warning" href="@Url.Action("Edit", new { id = cliente.IdCliente })">Editar</a>
+                    <a class="btn btn-danger" href="@Url.Action("Delete", new { id = cliente.IdCliente })">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-primary" href="@Url.Action("Create")">Novo Cliente</a>

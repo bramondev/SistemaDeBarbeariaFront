@@ -1,0 +1,17 @@
+@model SistemaDeBarbeariaFront.Models.Barbeiro
+
+<h1>Editar Barbeiro</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" name="Id" value="@Model.IdBarbeiro" />
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        <input type="text" class="form-control" id="NomeBarbeiro" name="Nome" value="@Model.NomeBarbeiro" required>
+    </div>
+    <div class="form-group">
+        <label for="Especialidade">Especialidade</label>
+        <input type="text" class="form-control" id="Especialidade" name="Especialidade" value="@Model.Especialidade" required>
+    </div>
+    <button type="submit" class="btn btn-success">Salvar</button>
+    <a class="btn btn-secondary" href="@Url.Action("Index")">Cancelar</a>
+</form>

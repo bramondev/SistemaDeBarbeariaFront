@@ -1,0 +1,16 @@
+@model SistemaDeBarbeariaFront.Models.Cliente
+
+<h1>Excluir Cliente</h1>
+
+<p>Tem certeza que deseja excluir o cliente abaixo?</p>
+
+<div>
+    <h3>Nome: @Model.NomeCliente</h3>
+    <p>Telefone: @Model.TelefoneCliente</p>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" name="Id" value="@Model.IdCliente" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a class="btn btn-secondary" href="@Url.Action("Index")">Cancelar</a>
+</form>

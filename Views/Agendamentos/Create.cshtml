@@ -1,0 +1,25 @@
+@model SistemaDeBarbeariaFront.Models.Agendamento
+
+<h1>Novo Agendamento</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Cliente">Cliente</label>
+        <input type="text" class="form-control" id="cliente" name="Cliente" required>
+    </div>
+    <div class="form-group">
+        <label for="Barbeiro">Barbeiro</label>
+        <input type="text" class="form-control" id="barbeiro" name="Barbeiro" required>
+    </div>
+    <div class="form-group">
+        <label for="Servico">Serviço</label>
+        <input type="text" class="form-control" id="servicos" name="Servico" required>
+    </div>
+    <div class="form-group">
+        <label for="Data">Data</label>
+        <input type="date" class="form-control" id="HorarioData" name="HorarioData" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Salvar</button>
+    <a class="btn btn-secondary" href="@Url.Action("Index")">Cancelar</a>
+</form>

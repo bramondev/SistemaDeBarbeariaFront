@@ -1,0 +1,35 @@
+@model IEnumerable<SistemaDeBarbeariaFront.Models.Agendamento>
+
+<h1>Lista de Agendamentos</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Cliente</th>
+            <th>Barbeiro</th>
+            <th>Serviço</th>
+            <th>Data</th>
+            <th>Horário</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var agendamento in Model)
+        {
+            <tr>
+                <td>@agendamento.cliente</td>
+                <td>@agendamento.barbeiro</td>
+                <td>@agendamento.servicos</td>
+                <td>@agendamento.HorarioData.ToShortDateString()</td>
+                
+                <td>
+                    <a class="btn btn-info" href="@Url.Action("Details", new { id = agendamento.AgendamentoId })">Detalhes</a>
+                    <a class="btn btn-warning" href="@Url.Action("Edit", new { id = agendamento.AgendamentoId })">Editar</a>
+                    <a class="btn btn-danger" href="@Url.Action("Delete", new { id = agendamento.AgendamentoId })">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-primary" href="@Url.Action("Create")">Novo Agendamento</a>
